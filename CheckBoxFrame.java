@@ -31,7 +31,7 @@ public class CheckBoxFrame extends JFrame
 
       boldJCheckBox = new JCheckBox("Bold"); 
       italicJCheckBox = new JCheckBox("Italic"); 
-      underlineJCheckBox = new JCheckBox("Underscore");
+      underlineJCheckBox = new JCheckBox("Underline");
       add(boldJCheckBox); // add bold checkbox to JFrame
       add(italicJCheckBox); // add italic checkbox to JFrame
       add (underlineJCheckBox);
