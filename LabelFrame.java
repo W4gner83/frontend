@@ -2,30 +2,33 @@ import java.awt.FlowLayout; //classe responsável por organizar as janelas de fo
 import javax.swing.JFrame; /*Classe que representa as janelas no sistema operacional, disponível na biblioteca swing, responsável por fornecer os componentes básicos 
                            da interface gráfica*/
 import javax.swing.JLabel; // JLabel Componente que representa texto ou imagem 
-import javax.swing.SwingConstants;
+import javax.swing.SwingConstants; // Constantes comuns dentro do Swing
 import javax.swing.Icon; // 
-import javax.swing.ImageIcon; // 
+import javax.swing.ImageIcon; // Manipula imagens
 
-public class LabelFrame extends JFrame {
-   private final JLabel label1; //
-   private final JLabel label2; //
-   private final JLabel label3; //
+public class LabelFrame extends JFrame { // Classe LabelFrame, herdeira da JFrame
+   private final JLabel label1; // variável criada para ser usada na classe
+   private final JLabel label2; // variável criada para ser usada na classe
+   private final JLabel label3; // variável criada para ser usada na classe
 
-   public LabelFrame() {
-      super("Testing JLabel");
-      setLayout(new FlowLayout());
+   public LabelFrame() // construtor
+   {
+      super("Testing JLabel"); // super = define o título da janela, na parte superior
+      setLayout(new FlowLayout()); // define como será o layout
 
-      label1 = new JLabel("Label with text");
-      label1.setToolTipText("This is label1");
-      add(label1);
+      label1 = new JLabel("Label with text"); // declaração de variável e = operador de atribuição
+      label1.setToolTipText("This is label1");// textos das ferramentas
+      add(label1); // adiciona variável do componente JLabel
 
-      Icon bug = new ImageIcon(getClass().getResource("bug1.png"));
-      label2 = new JLabel("Label with text and icon", bug,
+      Icon bug = new ImageIcon(getClass().getResource("bug1.png")); // Icon é a definição de tipo, variável
+      label2 = new JLabel("Label with text and icon", bug, // vígula dentro dos parenteses separa os parametros.
+                                                           // SwingConstants.LEFT é o parametro do tipo Swingconstants
+                                                           // alinhado a esquerda
             SwingConstants.LEFT);
-      label2.setToolTipText("This is label2");
+      label2.setToolTipText("This is label2"); // o "ponto" invoca o texto de ferramenta de dicas
       add(label2);
 
-      label3 = new JLabel();
+      label3 = new JLabel(); // JLabel constructor no arguments
       label3.setText("Label with icon and text at bottom");
       label3.setIcon(bug);
       label3.setHorizontalTextPosition(SwingConstants.CENTER);
